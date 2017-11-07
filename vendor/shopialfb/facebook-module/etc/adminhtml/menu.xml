@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright 2017 Shopial. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+		<add id="Shopial_Facebook::marketing_social" title="Social" module="Shopial_Facebook" sortOrder="30" 
+		    parent="Magento_Backend::marketing"  resource="Shopial_Facebook::marketing_social"/>
+        <add id="Shopial_Facebook::shopial_facebook" title="Connect to Facebook" module="Shopial_Facebook" sortOrder="10" 
+            parent="Shopial_Facebook::marketing_social" action="facebook" resource="Shopial_Facebook::shopial_facebook"/>        
+    </menu>
+</config>

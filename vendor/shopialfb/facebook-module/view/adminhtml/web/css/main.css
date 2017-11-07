@@ -1,0 +1,22 @@
+/**
+ * Copyright 2017 Shopial. All rights reserved.
+ */
+
+.page-layout-admin-2columns-left .page-columns .main-col {
+	width: calc( (100%) - 30px )!important;
+	padding-left: 15px!important;
+}
+
+
+#main-container-shopial {
+	height: 500px;
+}
+
+#main-container-shopial a {
+	color: #fff!important;
+	text-decoration: none!important;
+}
+
+#main-container-shopial tr {
+	height: 45px;
+}

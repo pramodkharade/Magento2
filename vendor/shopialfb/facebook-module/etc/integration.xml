@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright 2017 Shopial. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Integration:etc/integration/integration.xsd">
+    <integration name="Magento Social">
+        <endpoint_url>https://fbapp.ezsocialshop.com/facebook/index.php/magento_auth</endpoint_url>
+        <email>otahor@magento.com</email>
+        <identity_link_url>https://fbapp.ezsocialshop.com/facebook/index.php/magento2/show_magento_success_popup</identity_link_url>
+        <resources>
+            <resource name="Magento_Catalog::products" />
+            <resource name="Magento_Backend::store" />
+        </resources>
+    </integration>
+</config>

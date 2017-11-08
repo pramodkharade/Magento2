@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+           <argument name="commands" xsi:type="array">
+                <item name="masteringAddItem" xsi:type="object">Mastering\Itdesire\Console\Command\AddItem</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference type="Mastering\Itdesire\Model\Item" for="Mastering\Itdesire\Api\Data\ItemInterface"/>
+    <preference type="Mastering\Itdesire\Model\ItemRepository" for="Mastering\Itdesire\Api\ItemRepositoryInterface"/>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="mastering_item_grid_data_source" xsi:type="string">Mastering\Itdesire\Model\ResourceModel\Item\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="base_tax_amount" xsi:type="string">sales_order.base_tax_amount</item>
+            </argument>
+        </arguments>
+    </virtualType>
+</config>
